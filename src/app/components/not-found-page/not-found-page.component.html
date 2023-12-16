@@ -1,1 +1,32 @@
-<p>not-found-page works!</p>
+<section class="py-6 mt-5">
+  <div
+    class="container min-vh-50 py-6 d-flex justify-content-center align-items-center"
+    style="max-width: 1920px; background-color: #1c2331"
+  >
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="lc-block mb-4">
+          <div editable="rich">
+            <h1 class="fw-bold display-1">404</h1>
+          </div>
+        </div>
+        <div class="lc-block">
+          <div editable="rich">
+            <p class="h2">Sorry, we can’t find the page you’re looking for.</p>
+            <p class="lead">
+              Click the button below to go back to the homepage
+            </p>
+          </div>
+        </div>
+        <div class="lc-block">
+          <a (click)="onRedirectHome()" class="btn btn-primary" role="button">
+            Homepage
+          </a>
+          <a (click)="onRedirectEshop()" class="btn btn-info" role="button">
+            Browse Our Products
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
