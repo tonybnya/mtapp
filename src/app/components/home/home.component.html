@@ -1,1 +1,61 @@
-<p>home works!</p>
+<section
+  style="
+    background: radial-gradient(
+      116.18% 118% at 50% 100%,
+      rgba(99, 102, 241, 0.1) 0%,
+      rgba(218, 70, 239, 0.05) 41.83%,
+      rgba(241, 244, 253, 0.07) 82.52%
+    );
+    height: 100%;
+  "
+>
+  <div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img
+          src="https://lclibrary.b-cdn.net/wp-content/uploads/sites/15/2022/02/home_1.png"
+          class="d-block mx-lg-auto img-fluid wp-image-1116"
+          alt=""
+          loading="lazy"
+          width="800"
+          height="905"
+        />
+      </div>
+      <div class="col-lg-6">
+        <div class="lc-block mb-3">
+          <div editable="rich">
+            <h1 class="fw-bold display-3">
+              <span style="color: blueviolet">mt.app</span> is the best
+              e-commerce app out there.
+            </h1>
+            <p class="lead">
+              What you need is here. Browse our list of tech tools and grab a
+              bargain, at unbeatable prices. Take a tour out of curiosity and be
+              satisfied like never before.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="lc-block d-flex flex-column flex-sm-row justify-content-center justify-content-md-start"
+        >
+          <a
+            (click)="onRedirectContact()"
+            style="background-color: blueviolet; font-weight: 700"
+            class="btn btn-dark btn-lg px-3 py-2 me-sm-3 me-lg-4 mb-3"
+            >CONTACT US</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="lc-block text-center text-md-start">
+      <a
+        class="btn btn-link"
+        (click)="onRedirectEshop()"
+        role="button"
+        style="color: white; font-weight: 700"
+        >DISCOVER MORE</a
+      >
+    </div>
+  </div>
+</section>
