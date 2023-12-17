@@ -4,7 +4,7 @@ body {
 
 .hero-img {
   position: relative;
-  height: 600px;
+  height: 700px;
   overflow: hidden;
 }
 
@@ -16,7 +16,7 @@ body {
   width: 100%;
   height: 100%;
   background: url(../../../assets/bg/bg2.jpg) center/cover no-repeat;
-  filter: blur(5px); /* Adjust the blur amount as needed */
+  filter: blur(5px);
   z-index: -1;
 }
 
@@ -24,6 +24,6 @@ body {
   font-size: 5em;
   text-transform: capitalize;
   padding-top: 2em;
-  z-index: 1; /* Ensure the text appears above the blurred background */
-  color: #fff; /* Set the text color, assuming you want it to be white */
+  z-index: 1;
+  color: #fff;
 }
