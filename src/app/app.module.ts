@@ -10,6 +10,9 @@ import { EshopComponent } from './components/eshop/eshop.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { CartComponent } from './components/cart/cart.component';
+import { FilterComponent } from './components/filter/filter.component';
+import { ProductsComponent } from './components/products/products.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ContactComponent } from './components/contact/contact.component';
     EshopComponent,
     MyAccountComponent,
     NotFoundPageComponent,
-    ContactComponent
+    ContactComponent,
+    CartComponent,
+    FilterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
