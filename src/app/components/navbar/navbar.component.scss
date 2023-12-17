@@ -10,6 +10,9 @@
   color: white !important;
 }
 
-.navbar-toggler-icon {
-  color: white;
+.navbar-toggler {
+  background-color: white !important; 
+  .navbar-toggler-icon {
+    background-color: white !important;
+  }
 }
