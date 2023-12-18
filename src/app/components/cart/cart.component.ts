@@ -6,5 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }
