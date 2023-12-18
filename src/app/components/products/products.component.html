@@ -14,7 +14,13 @@
   >
     <mat-card style="width: 30%; height: 400px">
       <div class="image-background">
-        <img [src]="product.imgURL" class="card-img" [alt]="product.name" />
+        <img
+          style="cursor: pointer"
+          [src]="product.imgURL"
+          class="card-img"
+          [alt]="product.name"
+          routerLink="product/{{ product.id }}"
+        />
       </div>
       <mat-card-content class="card-content">
         <div class="title">
