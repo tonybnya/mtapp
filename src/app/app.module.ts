@@ -20,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SingleProductComponent } from './components/single-product/single-product.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     FilterComponent,
     ProductsComponent,
     ButtonComponent,
+    SingleProductComponent,
   ],
   imports: [
     BrowserModule,

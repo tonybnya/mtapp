@@ -20,7 +20,7 @@
 }
 
 .desc {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .card-img {
@@ -54,6 +54,10 @@
     padding: 10px;
     border-radius: 10px;
     background-color: #1C2331 !important;
+}
+
+mat-icon {
+    cursor: pointer;
 }
 
 .pagination-container {

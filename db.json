@@ -2,12 +2,13 @@
   "products": [
     {
       "id": 1,
-      "name": "Laptop Protective Bag",
+      "name": "laptop Protective Bag",
       "price": 21,
       "description": "Protective laptop bag with padded design for secure and stylish transport.",
       "imgURL": "https://i.postimg.cc/rp8FK5mS/laptop-protective-bag.jpg",
-      "category": "Accessory",
-      "quantity": 10
+      "category": "accessory",
+      "quantity": 10,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 2,
@@ -15,35 +16,39 @@
       "price": 349,
       "description": "Sleek and brilliant smartphone with great display, powerful camera, enduring battery.",
       "imgURL": "https://i.postimg.cc/mZmswhwS/samsung-galaxy-a5.jpg",
-      "category": "Phone",
-      "quantity": 23
+      "category": "phone",
+      "quantity": 23,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 3,
-      "name": "LG Ultra 16 U7R Laptop",
+      "name": "LG Ultra 16 U7R laptop",
       "price": 629,
       "description": "Powerful computer combining performance and style for enhanced productivity on the go.",
       "imgURL": "https://i.postimg.cc/SsjrbZBR/lg-ultrapc.jpg",
-      "category": "Laptop",
-      "quantity": 37
+      "category": "laptop",
+      "quantity": 37,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 4,
-      "name": "KODAK PIXPRO Digital Camera",
+      "name": "KODAK PIXPRO Digital camera",
       "price": 185,
       "description": "Capture life's moments in stunning detail with this feature-packed and user-friendly camera",
       "imgURL": "https://i.postimg.cc/sg2K4Nvx/kodak-pixpro-digital-camera.jpg",
-      "category": "Camera",
-      "quantity": 49
+      "category": "camera",
+      "quantity": 49,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 5,
-      "name": "Sony PlayStation 4 Slim Gaming Console",
+      "name": "Sony PlayStation 4 Slim Gaming console",
       "price": 275,
       "description": "Immerse yourself in gaming with this sleek and powerful console, delivering a premium gaming experience.",
       "imgURL": "https://i.postimg.cc/SQMKJSdN/sony-playstation4-slim-gaming-console.jpg",
-      "category": "Console",
-      "quantity": 16
+      "category": "console",
+      "quantity": 16,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 6,
@@ -51,8 +56,9 @@
       "price": 15,
       "description": "Effortlessly power up your devices with cable-free convenience and efficient charging technology.",
       "imgURL": "https://i.postimg.cc/qvcvJ1kJ/wireless-charger.jpg",
-      "category": "Accessory",
-      "quantity": 25
+      "category": "accessory",
+      "quantity": 25,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 7,
@@ -60,35 +66,39 @@
       "price": 135,
       "description": "Feature-rich smartphone with 5G capability, a built-in stylus, and impressive camera capabilities.",
       "imgURL": "https://i.postimg.cc/FzHQvQ9c/motorola-moto-g-stylus-5g.jpg",
-      "category": "Phone",
-      "quantity": 41
+      "category": "phone",
+      "quantity": 41,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 8,
-      "name": "Acer Aspire 3 Slim Laptop",
+      "name": "Acer Aspire 3 Slim laptop",
       "price": 349,
       "description": "Sleek and efficient device for everyday computing, combining performance and a stylish design.",
       "imgURL": "https://i.postimg.cc/250wJpXg/acer-aspire-3-slim-laptop.webp",
-      "category": "Laptop",
-      "quantity": 21
+      "category": "laptop",
+      "quantity": 21,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 9,
-      "name": "Canon EOS Rebel Camera",
+      "name": "Canon EOS Rebel camera",
       "price": 479,
       "description": "Unleash your creativity with this versatile and user-friendly DSLR, capturing stunning images with ease.",
       "imgURL": "https://i.postimg.cc/15svftSp/canon-eos-rebel-camera.jpg",
-      "category": "Camera",
-      "quantity": 59
+      "category": "camera",
+      "quantity": 59,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 10,
-      "name": "Nintendo Switch Gaming Console",
+      "name": "Nintendo Switch Gaming console",
       "price": 287,
       "description": "Gaming console offering versatility with both handheld and TV modes, providing an immersive gaming experience.",
       "imgURL": "https://i.postimg.cc/Kv7vD0C6/nintendo-switch-gaming-console.jpg",
-      "category": "Console",
-      "quantity": 17
+      "category": "console",
+      "quantity": 17,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 11,
@@ -96,8 +106,9 @@
       "price": 19,
       "description": "Versatile and essential for connecting and securing various devices, ensuring compatibility and convenience.",
       "imgURL": "https://i.postimg.cc/JzChCfCY/adapter-mount.jpg",
-      "category": "Accessory",
-      "quantity": 27
+      "category": "accessory",
+      "quantity": 27,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 12,
@@ -105,35 +116,39 @@
       "price": 499,
       "description": "Powerful and affordable smartphone, delivering an exceptional camera experience and seamless integration with Google's ecosystem.",
       "imgURL": "https://i.postimg.cc/mkpW26Dn/google-pixel-7a.jpg",
-      "category": "Phone",
-      "quantity": 18
+      "category": "phone",
+      "quantity": 18,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 13,
-      "name": "ASUS Vivobook Go Ultra Thin Laptop",
+      "name": "ASUS Vivobook Go Ultra Thin laptop",
       "price": 158.99,
       "description": "Ultra-thin and ultra-portable, this laptop combines sleek design with powerful performance for on-the-go productivity.",
       "imgURL": "https://i.postimg.cc/FKrpDFGj/asus-vivobook-go-ultra-thin-laptop.webp",
-      "category": "Laptop",
-      "quantity": 13
+      "category": "laptop",
+      "quantity": 13,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 14,
-      "name": "Panasonic LUMIX Mirrorless Camera",
+      "name": "Panasonic LUMIX Mirrorless camera",
       "price": 497,
       "description": "Capture moments with precision and clarity using this advanced mirrorless camera, designed for professionals.",
       "imgURL": "https://i.postimg.cc/pVD0WjwW/panasonic-lumix-mirrorless-camera.jpg",
-      "category": "Camera",
-      "quantity": 11
+      "category": "camera",
+      "quantity": 11,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     },
     {
       "id": 15,
-      "name": "Valve Steam Deck Handheld Gaming Console",
+      "name": "Valve Steam Deck Handheld Gaming console",
       "price": 57,
       "description": "Handheld gaming console that brings the power of PC gaming to your hands, offering an immersive gaming experience.",
       "imgURL": "https://i.postimg.cc/NfvjX3C8/valve-steam-deck-handheld-gaming-console.jpg",
-      "category": "Console",
-      "quantity": 19
+      "category": "console",
+      "quantity": 19,
+      "long_desc": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
     }
   ],
   "posts": [
