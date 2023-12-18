@@ -11,7 +11,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'eshop', component: EshopComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'account', component: MyAccountComponent },
+  { path: 'account', component: MyAccountComponent, data: {type: 'myAccount'} },
+  { path: 'login', component: MyAccountComponent, data: {type: 'login'} },
+  { path: 'register', component: MyAccountComponent, data: {type: 'register'} },
   { path: '**', component: NotFoundPageComponent }
 ];
 
