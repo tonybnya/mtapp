@@ -1,117 +1,37 @@
 <div class="results mt-5 d-flex justify-content-between">
-  <p>Results: <span class="mx-2"> 122</span></p>
+  <p>
+    Results: <span class="mx-2">{{ products.length }}</span>
+  </p>
   <p>Sort By <i class="fa-solid fa-chevron-down"></i></p>
 </div>
 
 <div class="products">
-  <mat-card style="width: 30%">
-    <div class="image-background">
-      <img
-        src="../../../assets/items/consoles/ps5.jpg"
-        class="card-img"
-        alt="item image"
-      />
-    </div>
-    <mat-card-content class="card-content">
-      <div class="title">
-        <h5>Cup</h5>
+  <ng-container *ngFor="let product of products">
+    <mat-card style="width: 30%; height: 400px">
+      <div class="image-background">
+        <img [src]="product.imgURL" class="card-img" [alt]="product.name" />
       </div>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div class="price">$10</div>
-        <div style="display: flex;gap: 10px;">
-          <div class="card-button"><mat-icon>shopping_cart</mat-icon></div>
-          <div class="card-button"><mat-icon>info</mat-icon></div>
+      <mat-card-content class="card-content">
+        <div class="title">
+          <h5>{{ product.name }}</h5>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  <mat-card style="width: 30%">
-    <div class="image-background">
-      <img
-        src="../../../assets/items/consoles/controller-ps5.jpg"
-        class="card-img"
-        alt="item image"
-      />
-    </div>
-    <mat-card-content class="card-content">
-      <div class="title">
-        <h5>Ps5 controller</h5>
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div class="price">$10</div>
-        <div style="display: flex;gap: 10px;">
-
-        <div class="card-button"><mat-icon>shopping_cart</mat-icon></div>
-        <div class="card-button"><mat-icon>info</mat-icon></div>
-
-</div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  <mat-card style="width: 30%">
-    <div class="image-background">
-      <img
-        src="../../../assets/items/pc/msi.jpg"
-        class="card-img"
-        alt="item image"
-      />
-    </div>
-    <mat-card-content class="card-content">
-      <div class="title">
-        <h5>Ecran PC Gaming - MSI - Pro MP241X</h5>
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div class="price">$10</div>
-        <div style="display: flex;gap: 10px;">
-          <div class="card-button"><mat-icon>shopping_cart</mat-icon></div>
-          <div class="card-button"><mat-icon>info</mat-icon></div>
+        <div style="text-align: justify">
+          <p class="desc">{{ product.description }}</p>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-  <mat-card style="width: 30%">
-    <div class="image-background">
-      <img
-        src="../../../assets/items/accessories/logitech.jpg"
-        class="card-img"
-        alt="item image"
-      />
-    </div>
-    <mat-card-content class="card-content">
-      <div class="title">
-        <h5>LOGITECH Ensemble Clavier Souris MK220</h5>
-      </div>
-      <div
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div class="price">$10</div>
-        <div style="display: flex;gap: 10px;">
-          <div class="card-button"><mat-icon>shopping_cart</mat-icon></div>
-          <div class="card-button"><mat-icon>info</mat-icon></div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div class="price">{{ product.price | currency }}</div>
+          <div style="display: flex; gap: 10px">
+            <div class="card-button"><mat-icon>shopping_cart</mat-icon></div>
+            <div class="card-button"><mat-icon>info</mat-icon></div>
+          </div>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
 </div>
