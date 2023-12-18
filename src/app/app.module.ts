@@ -21,6 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SingleProductComponent } from './components/single-product/single-product.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { SingleProductComponent } from './components/single-product/single-produ
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
