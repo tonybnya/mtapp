@@ -1,0 +1,31 @@
+.container-single {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.white-color {
+  border-top: 2px solid white;
+}
+
+.border {
+  border: 2px solid;
+  border-color: red !important;
+  border-radius: 25px;
+  padding: 5px 40px;
+  color: red;
+}
+
+.name {
+  font-family: 'Syncopate', sans-serif;
+}
+
+.description {
+  font-size: 14px;
+  text-align: justify;
+}
+
+.carac {
+  .gray {
+    color: darkgray;
+  }
+}

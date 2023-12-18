@@ -19,4 +19,6 @@ export class SingleProductComponent implements OnInit {
       this.product = res;
     });
   }
+
+  addToCart(product: any) {}
 }
