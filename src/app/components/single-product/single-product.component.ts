@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ApiProductsService } from 'src/app/services/api-products.service';
 
 @Component({
@@ -7,13 +8,14 @@ import { ApiProductsService } from 'src/app/services/api-products.service';
   styleUrls: ['./single-product.component.scss']
 })
 export class SingleProductComponent implements OnInit {
-  id!: number;
+  // id!: number;
   product!: any;
 
-  constructor(private api: ApiProductsService) {}
+  constructor(private api: ApiProductsService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.api.getProductById(this.id).subscribe((res) => {
+    const id = +this.route.snapshot.params['id'];
+    this.api.getProductById(id).subscribe((res) => {
       this.product = res;
     });
   }
