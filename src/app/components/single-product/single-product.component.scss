@@ -9,14 +9,18 @@
 
 .border {
   border: 2px solid;
-  border-color: red !important;
+  border-color: blueviolet !important;
   border-radius: 25px;
   padding: 5px 40px;
-  color: red;
+  color: blueviolet;
 }
 
 .name {
   font-family: 'Syncopate', sans-serif;
+}
+
+.float-end {
+  cursor: pointer;
 }
 
 .description {

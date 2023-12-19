@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiProductsService } from 'src/app/services/api-products.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-single-product',
@@ -11,7 +12,7 @@ export class SingleProductComponent implements OnInit {
   // id!: number;
   product!: any;
 
-  constructor(private api: ApiProductsService, private route: ActivatedRoute) {}
+  constructor(private api: ApiProductsService, private route: ActivatedRoute, private router: Router, private cartService: CartService ) {}
 
   ngOnInit(): void {
     const id = +this.route.snapshot.params['id'];
@@ -20,5 +21,8 @@ export class SingleProductComponent implements OnInit {
     });
   }
 
-  addToCart(product: any) {}
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+    this.router.navigateByUrl('cart');
+  }
 }
