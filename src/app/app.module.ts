@@ -23,6 +23,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { SingleProductComponent } from './components/single-product/single-product.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { OrderComponent } from './components/order/order.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatInputModule } from '@angular/material/input';
     ProductsComponent,
     ButtonComponent,
     SingleProductComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
