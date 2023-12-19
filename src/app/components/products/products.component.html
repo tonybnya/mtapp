@@ -38,7 +38,9 @@
         >
           <div class="price">{{ product.price | currency }}</div>
           <div style="display: flex; gap: 10px">
-            <div class="card-button"><mat-icon>shopping_cart</mat-icon></div>
+            <div class="card-button">
+              <mat-icon (click)="addToCart(product)">shopping_cart</mat-icon>
+            </div>
             <div class="card-button"><mat-icon>info</mat-icon></div>
           </div>
         </div>

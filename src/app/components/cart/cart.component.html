@@ -1,5 +1,75 @@
-<div class="container">
-  <div class="cart float-end pt-3">
-    <i class="fa-solid fa-cart-shopping fa-2x"></i>
+<ng-container *ngIf="products.length != 0">
+  <div class="container container-width mt-5">
+    <div class="row">
+      <div class="d-flex justify-content-between">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a routerLink="/eshop">eshop</a>
+            </li>
+            <li
+              class="breadcrumb-item active"
+              aria-current="page"
+              routerLink="/cart"
+            >
+              Cart
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="recap mt-5">
+      <p style="font-size: 20px">Cart summary</p>
+    </div>
+    <ng-container *ngFor="let product of products">
+      <div
+        class="d-flex justify-content-between align-items-center border-product"
+      >
+        <div class="product d-flex align-items-center">
+          <img width="30%" [src]="product.imgURL" [alt]="product.name" />
+          <div class="mx-4">
+            <h5 style="font-family: 'Syncopate', sans-serif">
+              {{ product.name }}
+            </h5>
+            <span>Product number X000 {{ product.id }}</span>
+          </div>
+        </div>
+        <div class="price">
+          <p>{{ product.price | currency }}</p>
+        </div>
+        <div class="qte bg-secondary">
+          <i class="fa-solid fa-minus mx-4"></i><span class="fs-4">1</span>
+          <i class="fa-regular fa-2x fa-plus mx-4"></i>
+        </div>
+        <div class="delete">
+          <i
+            (click)="removeItem(product.id)"
+            class="fa-solid fa-2x fa-xmark"
+          ></i>
+        </div>
+      </div>
+    </ng-container>
+    <div class="sous-total container-width">
+      <h4 class="float-end">
+        <strong>Subtotal : {{ total | currency }}</strong>
+      </h4>
+    </div>
   </div>
-</div>
+  <section class="container container-width d-flex mx-auto my-5">
+    <app-button
+      class="mx-2"
+      text="Continue shopping"
+      routerLink="/eshop"
+    ></app-button>
+    <app-button class="mx-2" routerLink="order" text="Ordering"></app-button>
+  </section>
+</ng-container>
+
+<br /><br />
+
+<ng-container *ngIf="products.length == 0">
+  <h1 class="text-center">Your shopping cart is empty</h1>
+  <div class="container-width mb-5">
+    <app-button text="Go shopping" routerLink="/eshop"></app-button>
+  </div>
+</ng-container>
