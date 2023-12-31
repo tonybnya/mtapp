@@ -1,1 +1,50 @@
-<p>signin works!</p>
+<section id="hero">
+  <div class="hero-image">
+    <div class="container">
+      <h1 class="hero-title text-uppercase text-white"></h1>
+    </div>
+  </div>
+</section>
+<section class="login">
+  <div class="container login-form">
+    <div class="head text-center">
+      <h2>Login</h2>
+      <p>
+        Don't have an account yet?
+        <a routerLink="/signup" class="text-white">Sign Up Here!</a>
+      </p>
+    </div>
+    <div class="form-body">
+      <form class="form">
+        <div class="mb-3">
+          <label for="email" class="form-label">Login</label>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="d-grid mx-auto">
+          <app-button
+            class="mx-2"
+            routerLink="order"
+            text="CONFIRM"
+          ></app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

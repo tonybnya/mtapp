@@ -1,1 +1,95 @@
-<p>signup works!</p>
+<section id="hero">
+  <div class="hero-image">
+    <div class="container">
+      <h1 class="hero-title text-uppercase text-white"></h1>
+    </div>
+  </div>
+</section>
+<section class="register">
+  <div class="container register-form">
+    <div class="head text-center">
+      <h2>Register</h2>
+      <p>
+        Already have an account?
+        <a routerLink="/signin" class="text-white">Sign In Here!</a>
+      </p>
+    </div>
+    <div class="form-body">
+      <form class="form">
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            formControlName="name"
+            type="text"
+            class="form-control"
+            id="name"
+            aria-describedby="emailHelp"
+            placeholder="Name"
+          />
+          <br />
+          <span class="invalid-feedback">Name can't be blank</span>
+        </div>
+        <div class="mb-3">
+          <label for="firstname" class="form-label">First Name</label>
+          <input
+            formControlName="firstname"
+            type="text"
+            class="form-control"
+            id="firstname"
+            aria-describedby="emailHelp"
+            placeholder="Firstname"
+          />
+          <br />
+          <span class="invalid-feedback">First name can't be blank</span>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Login</label>
+          <input
+            formControlName="email"
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+            placeholder="Email"
+          />
+          <br />
+          <span class="invalid-feedback">Email can't be blank</span>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            formControlName="password"
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+          />
+          <br />
+          <span class="invalid-feedback">Name can't be blank</span>
+        </div>
+        <div class="mb-3">
+          <label for="confirmPassword" class="form-label"
+            >Confirm Password</label
+          >
+          <input
+            formControlName="confirmPassword"
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+          />
+          <br />
+          <span class="invalid-feedback">Password must match</span>
+        </div>
+
+        <div class="d-grid mx-auto">
+          <app-button
+            class="mx-2"
+            routerLink="order"
+            text="CONFIRM"
+          ></app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
