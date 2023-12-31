@@ -24,6 +24,8 @@ import { SingleProductComponent } from './components/single-product/single-produ
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { OrderComponent } from './components/order/order.component';
+import { SigninComponent } from './components/signin/signin.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +43,8 @@ import { OrderComponent } from './components/order/order.component';
     ButtonComponent,
     SingleProductComponent,
     OrderComponent,
+    SigninComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
