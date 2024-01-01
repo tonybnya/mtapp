@@ -165,5 +165,34 @@
       "postId": 1
     }
   ],
-  "signupUsers": []
+  "signupUsers": [
+    {
+      "name": "NYA",
+      "firstname": "Tony Blondeau",
+      "email": "nya.tony2010@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "azerty",
+      "firstname": "qwerty",
+      "email": "aq@gmail.com",
+      "password": "@q",
+      "id": 2
+    },
+    {
+      "name": "ask",
+      "firstname": "me",
+      "email": "askme@gmail.com",
+      "password": "@sku",
+      "id": 3
+    },
+    {
+      "name": "John",
+      "firstname": "Doe",
+      "email": "johndoe@gmail.com",
+      "password": "johndoe1234",
+      "id": 4
+    }
+  ]
 }

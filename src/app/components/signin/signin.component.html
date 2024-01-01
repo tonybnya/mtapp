@@ -15,7 +15,7 @@
       </p>
     </div>
     <div class="form-body">
-      <form class="form">
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="login()">
         <div class="mb-3">
           <label for="email" class="form-label">Login</label>
           <input
@@ -24,7 +24,7 @@
             class="form-control"
             id="email"
             aria-describedby="emailHelp"
-            placeholder="Email"
+            placeholder="email"
           />
         </div>
         <div class="mb-3">
@@ -34,15 +34,11 @@
             type="password"
             class="form-control"
             id="password"
-            placeholder="Password"
+            placeholder="password"
           />
         </div>
         <div class="d-grid mx-auto">
-          <app-button
-            class="mx-2"
-            routerLink="order"
-            text="CONFIRM"
-          ></app-button>
+          <app-button class="mx-2" text="CONFIRM"></app-button>
         </div>
       </form>
     </div>

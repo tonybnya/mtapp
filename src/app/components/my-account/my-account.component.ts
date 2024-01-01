@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,15 +8,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./my-account.component.scss']
 })
 export class MyAccountComponent {
-  hide: boolean = false;
-  type?: string;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
-    this.route.data.subscribe(data => {
-      this.type = data['type'];
-      console.log(this.type);
-      
-    });
+  }
+
+  logout(){
+    this.router.navigateByUrl('eshop');
   }
 }

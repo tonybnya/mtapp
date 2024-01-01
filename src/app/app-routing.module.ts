@@ -20,10 +20,11 @@ const routes: Routes = [
   { path: 'account', component: MyAccountComponent },
   { path: 'cart', component: CartComponent },
   { path: 'eshop/product/:id', component: SingleProductComponent },
-  { path: 'account', component: MyAccountComponent, data: { type: 'myAccount' } },
+  { path: 'my-account', component: MyAccountComponent },
   { path: 'cart/order', component: OrderComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
+  // { path: 'account', component: MyAccountComponent, data: { type: 'myAccount' } },
   // { path: 'login', component: MyAccountComponent, data: {type: 'login'} },
   // { path: 'register', component: MyAccountComponent, data: {type: 'register'} },
   { path: '**', component: NotFoundPageComponent }
