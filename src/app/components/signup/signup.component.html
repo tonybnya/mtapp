@@ -19,6 +19,11 @@
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
           <input
+            [ngClass]="{
+              'is-invalid':
+                registerForm.get('name')?.touched &&
+                registerForm.get('name')?.invalid
+            }"
             formControlName="name"
             type="text"
             class="form-control"
@@ -27,11 +32,23 @@
             placeholder="name"
           />
           <br />
-          <span class="invalid-feedback">Name can't be blank</span>
+          <span
+            *ngIf="
+              registerForm.controls['name'].dirty &&
+              registerForm.hasError('required', 'name')
+            "
+            class="text-danger"
+            >*Name can't be blank</span
+          >
         </div>
         <div class="mb-3">
           <label for="firstname" class="form-label">First Name</label>
           <input
+            [ngClass]="{
+              'is-invalid':
+                registerForm.get('firstname')?.touched &&
+                registerForm.get('firstname')?.invalid
+            }"
             formControlName="firstname"
             type="text"
             class="form-control"
@@ -40,11 +57,23 @@
             placeholder="firstname"
           />
           <br />
-          <span class="invalid-feedback">First name can't be blank</span>
+          <span
+            *ngIf="
+              registerForm.controls['firstname'].dirty &&
+              registerForm.hasError('required', 'firstname')
+            "
+            class="invalid-feedback"
+            >*First name can't be blank</span
+          >
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Login</label>
           <input
+            [ngClass]="{
+              'is-invalid':
+                registerForm.get('email')?.touched &&
+                registerForm.get('email')?.invalid
+            }"
             formControlName="email"
             type="email"
             class="form-control"
@@ -53,11 +82,23 @@
             placeholder="email"
           />
           <br />
-          <span class="invalid-feedback">Email can't be blank</span>
+          <span
+            *ngIf="
+              registerForm.controls['email'].dirty &&
+              registerForm.hasError('required', 'email')
+            "
+            class="invalid-feedback"
+            >*Email can't be blank</span
+          >
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input
+            [ngClass]="{
+              'is-invalid':
+                registerForm.get('password')?.touched &&
+                registerForm.get('password')?.invalid
+            }"
             formControlName="password"
             type="password"
             class="form-control"
@@ -65,13 +106,25 @@
             placeholder="password"
           />
           <br />
-          <span class="invalid-feedback">Password can't be blank</span>
+          <span
+            *ngIf="
+              registerForm.controls['password'].dirty &&
+              registerForm.hasError('required', 'password')
+            "
+            class="invalid-feedback"
+            >*Password can't be blank</span
+          >
         </div>
-        <!-- <div class="mb-3">
+        <div class="mb-3">
           <label for="confirmPassword" class="form-label"
             >Confirm Password</label
           >
           <input
+            [ngClass]="{
+              'is-invalid':
+                registerForm.get('confirmPassword')?.touched &&
+                registerForm.get('confirmPassword')?.invalid
+            }"
             formControlName="confirmPassword"
             type="password"
             class="form-control"
@@ -80,7 +133,7 @@
           />
           <br />
           <span class="invalid-feedback">Password must match</span>
-        </div> -->
+        </div>
 
         <div class="d-grid mx-auto">
           <app-button class="mx-2" text="CONFIRM"></app-button>

@@ -1,7 +1,25 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+
+
+/**
+ * 
+ * @param: form
+ */
+const passwordsMatchValidator = (form: any) => {
+  const password = form.get('password');
+  const confirmPassword = form.get('confirmPassword');
+
+  if (password.value !== confirmPassword.value) {
+    confirmPassword.setErrors({ passwordsMatch: true });
+  } else {
+    confirmPassword.setErrors(null);
+  }
+
+  return null;
+}
 
 @Component({
   selector: 'app-signup',
@@ -15,10 +33,13 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      name: [''],
-      firstname: [''],
-      email: [''],
-      password: ['']
+      name: ['', Validators.required],
+      firstname: ['', Validators.required],
+      email: ['', Validators.required],
+      password: ['', Validators.required],
+      confirmPassword: ''
+    }, {
+      validators: passwordsMatchValidator
     });
   }
 
