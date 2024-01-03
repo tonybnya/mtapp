@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Products } from 'src/app/models/products/products.module';
 import { ApiProductsService } from 'src/app/services/api-products.service';
 import { CartService } from 'src/app/services/cart.service';
+import { WishlistService } from 'src/app/services/wishlist.service';
 
 @Component({
   selector: 'app-products',
@@ -10,9 +12,10 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ProductsComponent implements OnInit {
   page: number = 1;
-  public products: any;
+  public products!: Products[];
+  isAdded: boolean = false;
 
-  constructor(private api: ApiProductsService, private cartService: CartService, private router: Router) {}
+  constructor(private api: ApiProductsService, private cartService: CartService, private router: Router, private wishlistService: WishlistService) {}
 
   ngOnInit(): void {
     this.api.getProducts().subscribe((res) => {
@@ -26,5 +29,15 @@ export class ProductsComponent implements OnInit {
   addToCart(product: any) {
     this.cartService.addToCart(product);
     this.router.navigateByUrl('cart');
+  }
+
+  addToWishlist(itemProduct: number) {
+    this.wishlistService.addToWishlist(itemProduct).subscribe(() => {
+      this.isAdded = true;
+    });
+  }
+
+  removeFromWishlist() {
+    this.isAdded = false;
   }
 }

@@ -64,7 +64,17 @@
             text="Add to cart"
           ></app-button>
           <div class="mx-3">
-            <i class="fa-regular border fa-2x fa-heart"></i>
+            <!-- <i class="fa-solid border fa-2x fa-heart fav-icon"></i> -->
+            <i
+              *ngIf="!isAdded"
+              class="fa-regular border fa-heart fa-2x fav-icon"
+              (click)="addToWishlist(product.id)"
+            ></i>
+            <i
+              *ngIf="isAdded"
+              class="fa-solid border fa-heart fa-2x fav-icon"
+              (click)="removeFromWishlist()"
+            ></i>
           </div>
         </div>
       </div>
@@ -81,7 +91,7 @@
   <div class="white-color"></div>
 </div>
 
-<section>
+<!-- <section>
   <div class="container-single">
     <div class="carac">
       <h4>Specifications</h4>
@@ -104,4 +114,4 @@
       <div class="white-color"></div>
     </div>
   </div>
-</section>
+</section> -->
