@@ -16,11 +16,10 @@ export class OrderComponent implements OnInit {
     this.cartService.getProducts().subscribe((item)=>{
       this.productsOrder = item;
       this.calculateTotal();
-
     })
   }
 
-  calculateTotal(): void{
+  calculateTotal(): void {
     this.total = 0;
     this.productsOrder.forEach((item:any)=>{
       this.total += item.quantity * item.price;
