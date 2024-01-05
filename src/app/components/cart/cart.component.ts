@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -9,17 +10,25 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
   public products: any = [];
   public total!: number;
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe((res) => {
       this.products = res;
-      this.total = +this.cartService.getTotalPrice();
+      this.total = 0;
+      this.products.forEach((item: any) => {
+        this.total += item.quantity * item.price;
+      });
+      // this.total = +this.cartService.getTotalPrice();
     });
   }
 
-  removeItem(product: any) {
+  removeItem(id: any) {
     if (confirm('Are you sure you want to remove this product?'))
-      this.cartService.removeCartItem(product);
+      this.cartService.removeCartItem(id).subscribe(() => {
+        alert('Item deleted!')
+        window.location.reload();
+        // this.router.navigateByUrl('cart');
+      });
   }
 }
