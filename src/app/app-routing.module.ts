@@ -10,6 +10,7 @@ import { SingleProductComponent } from './components/single-product/single-produ
 import { OrderComponent } from './components/order/order.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AuthGuard } from './auth.guard';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 const routes: Routes = [
@@ -21,7 +22,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'eshop/product/:id', component: SingleProductComponent },
   { path: 'my-account', component: MyAccountComponent },
-  { path: 'cart/order', component: OrderComponent },
+  { path: 'cart/order', component: OrderComponent, canActivate: [AuthGuard]},
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   // { path: 'account', component: MyAccountComponent, data: { type: 'myAccount' } },
