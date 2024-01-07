@@ -34,7 +34,7 @@ export class SigninComponent implements OnInit {
         this.router.navigateByUrl('/cart/order');
       } else {
         alert('Please Sign Up!');
-        // this.router.navigateByUrl('/signup');
+        this.router.navigateByUrl('/signup');
       }
     });
   }
