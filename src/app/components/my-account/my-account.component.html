@@ -18,11 +18,7 @@
             <a href="">Order history</a>
             <a href="">My reviews</a>
             <a href="">My favorites</a>
-            <app-button
-              class="mt-5"
-              (click)="logout()"
-              text="LOGOUT"
-            ></app-button>
+            <div (click)="logout()" style="cursor: pointer;" class="card-button">Logout</div>
           </ul>
         </nav>
       </div>
@@ -30,15 +26,15 @@
         <div class="info-perso">
           <h1 class="my-4">Personal informations</h1>
           <div class="content">
-            <p>Name: Dupont</p>
-            <p>First Name : Edeline</p>
-            <p>Password: lorem ipsum</p>
-            <p>Email: edelineprty@gmail.com</p>
-            <p>Phone Number: 060612756</p>
-            <p>Delivery Address : rue panamericaine, 234, marve 43,PARIS</p>
-            <p>Billing Address : rue panamericaine, 234, marve 43,PARIS</p>
+            <p>Name: -</p>
+            <p>First Name : -</p>
+            <p>Email: -</p>
+            <p>Phone Number: -</p>
+            <p>Delivery Address : -</p>
+            <p>Billing Address : -</p>
           </div>
-          <app-button text="MODIFY"></app-button>
+          
+          <div class="card-button">Modify</div>
         </div>
         <div class="info-newsletter">
           <h1 class="my-4">Newsletter</h1>
@@ -71,7 +67,7 @@
               </label>
             </div>
           </div>
-          <app-button text="REGISTER"></app-button>
+          <div class="card-button">Register</div>
         </div>
       </div>
       <div class="newsletter"></div>

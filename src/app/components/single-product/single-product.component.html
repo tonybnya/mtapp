@@ -59,13 +59,10 @@
       </div>
       <div class="row">
         <div class="d-flex align-items-center pb-5">
-          <app-button
-            (click)="addToCart(product)"
-            text="Add to cart"
-          ></app-button>
-          <div class="mx-3">
+          <div (click)="addToCart(product)" style="cursor: pointer;" class="card-button">Add to cart</div>
+          <!-- <div class="mx-3"> -->
             <!-- <i class="fa-solid border fa-2x fa-heart fav-icon"></i> -->
-            <i
+            <!-- <i
               *ngIf="!isAdded"
               class="fa-regular border fa-heart fa-2x fav-icon"
               (click)="addToWishlist(product.id)"
@@ -75,7 +72,7 @@
               class="fa-solid border fa-heart fa-2x fav-icon"
               (click)="removeFromWishlist()"
             ></i>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="white-color"></div>

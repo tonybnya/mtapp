@@ -7,9 +7,18 @@ h2 {
   font-family: 'Syncopate', sans-serif;
 }
 
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #6351CE !important;
+}
 .login-form {
   background-color: #6351ce;
-  max-width: 32%;
+  width: 32%;
   padding: 40px;
   margin-top: -35%;
   margin-bottom: 100px;

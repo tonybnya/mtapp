@@ -13,7 +13,14 @@
 //   font-weight: bolder;
 //   text-shadow: white 0px 10px 30px;
 // }
-
+.card-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #6351CE !important;
+}
 a {
   padding-top: 15px;
   color: white;

@@ -27,7 +27,9 @@ import { MatInputModule } from '@angular/material/input';
 import { OrderComponent } from './components/order/order.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { SignupComponent } from './components/signup/signup.component';
-
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatSliderModule} from '@angular/material/slider';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,9 +61,11 @@ import { SignupComponent } from './components/signup/signup.component';
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatBadgeModule,
+    MatSliderModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

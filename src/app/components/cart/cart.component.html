@@ -5,14 +5,16 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a routerLink="/eshop">Eshop</a>
+              <a class="nav-link" routerLink="/eshop">Eshop</a>
             </li>
             <li
+            [matBadge]="products.length"
+            matBadgeColor="warn"
               class="breadcrumb-item active"
               aria-current="page"
               routerLink="/cart"
             >
-              Cart
+            <span class="material-icons">shopping_cart</span>
             </li>
           </ol>
         </nav>
@@ -26,18 +28,18 @@
         class="d-flex justify-content-between align-items-center border-product"
       >
         <div class="product d-flex align-items-center">
-          <img width="30%" [src]="product.imgURL" [alt]="product.name" />
+          <img class="cart-img" [src]="product.imgURL" [alt]="product.name" />
           <div class="mx-4">
             <h5 style="font-family: 'Syncopate', sans-serif">
               {{ product.name }}
             </h5>
             <span>Product number X000 {{ product.id }}</span>
           </div>
+          <div class="price">
+            <h3>{{ product.price | currency }}</h3>
+          </div>
         </div>
-        <div class="price">
-          <p>{{ product.price | currency }}</p>
-        </div>
-        <div class="qte bg-secondary">
+        <div style="display: flex;justify-content: space-between;align-items: center;">
           <i class="fa-solid fa-minus mx-4"></i><span class="fs-4">1</span>
           <i class="fa-regular fa-2x fa-plus mx-4"></i>
         </div>
@@ -56,12 +58,11 @@
     </div>
   </div>
   <section class="container container-width d-flex mx-auto my-5">
-    <app-button
-      class="mx-2"
-      text="Continue shopping"
-      routerLink="/eshop"
-    ></app-button>
-    <app-button class="mx-2" routerLink="order" text="Ordering"></app-button>
+    <div       routerLink="/eshop"
+    style="cursor: pointer;" class="cart-button">Continue shopping</div>
+    <div       routerLink="/order"
+    style="cursor: pointer;" class="cart-button">Ordering</div>
+    <!-- <app-button class="mx-2" routerLink="order" text="Ordering"></app-button> -->
   </section>
 </ng-container>
 
@@ -69,7 +70,8 @@
 
 <ng-container *ngIf="products.length == 0">
   <h1 class="text-center">Your shopping cart is empty</h1>
-  <div class="container-width mb-5">
-    <app-button text="Go shopping" routerLink="/eshop"></app-button>
+  <div class="container-width mb-5" style="width: 20%;">
+    <div       routerLink="/eshop"
+    style="cursor: pointer;" class="cart-button">Go shopping</div>
   </div>
 </ng-container>

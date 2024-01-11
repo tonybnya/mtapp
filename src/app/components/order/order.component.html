@@ -1,5 +1,5 @@
 <br /><br /><br />
-<div class="container container-largeur">
+<div class="container container-largeur" style="margin-bottom: 30px;">
   <div class="row">
     <div class="d-flex justify-content-between">
       <nav aria-label="breadcrumb">
@@ -15,18 +15,18 @@
   </div>
   <div class="wrapper">
     <div class="d-flex justify-content-between">
-      <p class="fs-3">Order</p>
-      <p>{{ productsOrder.length }}</p>
+      <div class="d-flex">
+        <p class="fs-3">Order</p>
+        <p>({{ productsOrder.length }} products)</p>
+      </div>
       <i class="fa-solid fa-2x fa-xmark cursor-pointer"></i>
     </div>
 
     <ng-container *ngFor="let product of productsOrder">
       <div class="d-flex justify-content-between align-items-center">
-        <div class="d-flex align-items-center py-3">
+        <div class="d-flex align-items-center">
           <img
-            width="20%"
-            height="20%"
-            class="image"
+            class="order-img"
             [src]="product.imgURL"
             [alt]="product.name"
           />
@@ -50,38 +50,26 @@
     </ng-container>
     <br />
 
-    <div class="row">
-      <div>
-        <input type="text" placeholder="Promo Code " />
-        <button class="btn btn-outline-primary mx-4 px-5">ADD</button>
-      </div>
-    </div>
-
     <hr />
     <div class="d-flex justify-content-between">
       <p><strong>Total</strong></p>
       <p>{{ total | currency : "EUR" }}</p>
     </div>
     <div class="d-flex justify-content-between">
-      <p><strong>Discount</strong></p>
-      <p>-</p>
-    </div>
-    <div class="d-flex justify-content-between">
       <p><strong>Tax</strong></p>
-      <p>-</p>
+      <p>10%</p>
     </div>
     <hr />
     <div class="d-flex justify-content-between">
-      <p><strong>Final Total</strong></p>
-      <p>Total</p>
+      <p><strong>Total after TAX</strong></p>
+      <p>{{total - (total *  (10 / 100))| currency : "EUR"}}</p>
+    </div>
+    <div style="display: flex;justify-content: flex-end;">
+      <div routerLink="/cart"
+    style="cursor: pointer;" class="order-button">Back to cart</div>
+      <!-- <app-button class="mx-2" routerLink="/cart" text="Back to cart"></app-button> -->
+      <div routerLink="/delivery"
+    style="cursor: pointer;" class="order-button">Confirm My Purchase</div>
     </div>
   </div>
 </div>
-<section class="container container-largeur d-flex mx-auto my-5">
-  <app-button class="mx-2" routerLink="/cart" text="Back to cart"></app-button>
-  <app-button
-    class="mx-2"
-    routerLink="delivery"
-    text="Confirm My Purchase"
-  ></app-button>
-</section>

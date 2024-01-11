@@ -1,24 +1,23 @@
-<h1 class="fw-bold">Filter</h1>
-<div class="prix">
-  <h5 class="pt-3">Price</h5>
-  <div class="slidecontainer">
-    <input
-      type="range"
-      min="0"
-      max="200"
-      value="50"
-      class="slider"
-      id="myRange"
-    />
-    <br />
-    <label for="">0€</label>
-    <label for="" class="px-5 mx-5">100€</label>
+<div style="width: 100%;border: 2px solid white; border-radius: 10px;padding: 10px;">
+  <h1>Filter by:</h1>
+    <h2>Price</h2>
+    <div class="slidecontainer">
+      <mat-slider
+          class="example-margin"
+          [disabled]="disabled"
+          [max]="max"
+          [min]="min"
+          [step]="step"
+          [discrete]="thumbLabel"
+          [showTickMarks]="showTicks">
+        <input matSliderThumb [(ngModel)]="value" #slider>
+      </mat-slider>
   </div>
 </div>
 
 <br />
 
-<div class="categorie">
+<!-- <div class="categorie">
   <div class="dropdown">
     <div
       class="btn btn-secondary dropdown-toggle"
@@ -85,4 +84,4 @@
       <li><a class="dropdown-item" href="#">Something else here</a></li>
     </ul>
   </div>
-</div>
+</div> -->

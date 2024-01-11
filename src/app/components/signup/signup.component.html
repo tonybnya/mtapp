@@ -17,50 +17,25 @@
     <div class="form-body">
       <form class="form" [formGroup]="registerForm" (ngSubmit)="register()">
         <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
+          <label for="full_name" class="form-label">Full Name</label>
           <input
             [ngClass]="{
               'is-invalid':
-                registerForm.get('name')?.touched &&
-                registerForm.get('name')?.invalid
+                registerForm.get('full_name')?.touched &&
+                registerForm.get('full_name')?.invalid
             }"
-            formControlName="name"
+            formControlName="full_name"
             type="text"
             class="form-control"
-            id="name"
+            id="full_name"
             aria-describedby="emailHelp"
-            placeholder="name"
+            placeholder="Full name"
           />
           <br />
           <span
             *ngIf="
-              registerForm.controls['name'].dirty &&
-              registerForm.hasError('required', 'name')
-            "
-            class="text-danger"
-            >*Name can't be blank</span
-          >
-        </div>
-        <div class="mb-3">
-          <label for="firstname" class="form-label">First Name</label>
-          <input
-            [ngClass]="{
-              'is-invalid':
-                registerForm.get('firstname')?.touched &&
-                registerForm.get('firstname')?.invalid
-            }"
-            formControlName="firstname"
-            type="text"
-            class="form-control"
-            id="firstname"
-            aria-describedby="emailHelp"
-            placeholder="firstname"
-          />
-          <br />
-          <span
-            *ngIf="
-              registerForm.controls['firstname'].dirty &&
-              registerForm.hasError('required', 'firstname')
+              registerForm.controls['full_name'].dirty &&
+              registerForm.hasError('required', 'full_name')
             "
             class="invalid-feedback"
             >*First name can't be blank</span

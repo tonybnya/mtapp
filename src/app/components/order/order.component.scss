@@ -2,17 +2,18 @@
   max-width: 80%;
   margin: 0 auto;
   padding: 50px;
-  background: rgb(21, 47, 89);
-  background: linear-gradient(
-    180deg,
-    rgba(21, 47, 89, 1) 12%,
-    rgb(0, 0, 0) 95%
-  );
-  .image {
-    outline: 2px darkgray solid;
-  }
+  background-color: #6351CE;
+  border-radius: 10px;
 }
-
+.order-img {
+  width: 100px;
+  border-radius: 10px;
+  height: 100px;
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
+  // aspect-ratio: auto;
+}
 li {
   color: white !important;
 }
@@ -23,4 +24,14 @@ h4 {
 
 h5 {
   color: #6351CE !important;
+}
+
+.order-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: #1C2331 !important;
 }

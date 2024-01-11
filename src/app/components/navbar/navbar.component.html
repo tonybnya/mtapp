@@ -43,11 +43,26 @@
             >CONTACT</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="account" routerLinkActive="active"
-            >MY ACCOUNT</a
-          >
-        </li>
+        <ng-container *ngIf="isAuthenticated; else guest">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="account" routerLinkActive="active"
+              >MY ACCOUNT</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="logout()" routerLinkActive="active"
+              >Log out</a
+            >
+          </li>
+        </ng-container>
+        <ng-template #guest>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="account" routerLinkActive="active"
+              >Sign in</a
+            >
+          </li>
+        </ng-template>
+
         <!-- <li class="nav-item">
           <a class="nav-link" routerLink="login" routerLinkActive="active"
             >Login</a

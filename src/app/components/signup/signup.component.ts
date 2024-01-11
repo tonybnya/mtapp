@@ -2,10 +2,11 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
 
 /**
- * 
+ *
  * @param: form
  */
 const passwordsMatchValidator = (form: any) => {
@@ -19,36 +20,50 @@ const passwordsMatchValidator = (form: any) => {
   }
 
   return null;
-}
+};
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
   public registerForm!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private http:HttpClient, private router: Router) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private http: HttpClient,
+    private router: Router,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      firstname: ['', Validators.required],
-      email: ['', Validators.required],
-      password: ['', Validators.required],
-      confirmPassword: ''
-    }, {
-      validators: passwordsMatchValidator
-    });
+    this.registerForm = this.formBuilder.group(
+      {
+        full_name: ['', Validators.required],
+        email: ['', Validators.required],
+        password: ['', Validators.required],
+        confirmPassword: '',
+      },
+      {
+        validators: passwordsMatchValidator,
+      }
+    );
   }
 
   register(): void {
-    this.http.post<any>('http://localhost:3000/signupUsers', this.registerForm.value).subscribe((response) => {
-      alert('Registered successfully!');
+    this.authService.register(this.registerForm.value).subscribe((response) => {
+      Swal.fire({
+        text: 'Account created successfully! Now please sign in',
+        icon: 'success',
+      });
       this.registerForm.reset();
-      this.router.navigateByUrl('/signin');
+      this.router.navigate(['/signin']);
+    }, (error) => {
+      Swal.fire({
+        text: 'Internal server Error',
+        icon: 'error',
+      });
     });
-    console.log(this.registerForm.value);
   }
 }
